@@ -1,0 +1,13 @@
+<h1>Todo App</h1>
+<div ng-app="app">
+  <div ng-controller="tasksCtrl">
+    <ul>
+      <li ng-repeat="task in tasks track by $index" ng-click="completeTask($index)">{{ task }}</li>
+    </ul>
+    
+    <div>
+      <input type="text" ng-model="newTask">
+      <button ng-click="addTask(newTask)">Add Task</button>
+    </div>
+  </div>
+</div>
